@@ -1,81 +1,108 @@
-# Cub3D 🕹️
-Cub3D is a 3D game engine inspired by Wolfenstein 3D, built in C using the MLX42 (Codam) graphics library. The project is part of the 42 Network curriculum and focuses on understanding raycasting, graphics, and low-level programming.
+# 42 Common Core 📚💻
 
+This repository contains **all the projects I worked on (and will work on)** during the **42 / 1337 Common Core** curriculum. It reflects my progression in **low-level programming, algorithms, graphics, networking, and system concepts**.
 
-# Features
-Real-time raycasting engine
-Textured walls with correct perspective
-Player movement (W/A/S/D)
-Camera rotation with keyboard and mouse
-Mouse look (bonus)
-Floor and ceiling rendering
-Mini-map (bonus)
-Doors & hand animation (bonus)
-Collision detection
+---
 
+## 🎯 Purpose of This Repository
 
-# Controls
-Key /               Input	Action
-W / S / A  / D       Move forward / backward / Strafe left / right
-← / → / up / down	Rotate camera
-space               open/close the door
-Mouse               Look around
-ESC                 Exit game
+- Track my learning journey at **42 Network (1337 – Morocco)**
+- Centralize all Common Core projects in one place
+- Showcase my growth in **C programming and computer science fundamentals**
+- Serve as a reference for revision and improvement
 
+---
 
-# Concepts Learned
-Raycasting mathematics
-Perspective projection
-Texture mapping
-Event handling
-Game loop logic
-Mouse input handling
-Memory management in C
+## 🧠 Skills & Concepts Learned
 
+### Programming & Low-level
+- C programming (memory management, pointers, structs)
+- Manual memory allocation (malloc / free)
+- Data structures (arrays, linked lists)
+- Defensive programming & error handling
 
-# Installation
-git clone https://github.com/alemdaar/1337---Common-Core-Projects.git cc 
-cd cc/Circle_04/Cub3d
-make clone_mlx42
-make
-< or >
-make bonus
-# Usage
-    ->mandatory
-        ./cub3d maps/mandatory/basic.cub
-    ->bonus
-        ./cub3d maps/bonus/bn.cub
+### Algorithms & Logic
+- Algorithmic thinking & optimization
+- Sorting algorithms & complexity
+- State machines & parsing logic
 
+### UNIX & Systems
+- UNIX processes (fork, exec, wait)
+- File descriptors & redirections
+- Pipes & signals
+- Multithreading & synchronization (mutexes)
 
-# Map Rules
-1       : Wall
-0       : Empty space
-N S E W : Player start position
-D       : Door (bonus)
-Map must be closed/surrounded by walls !
+### Graphics & Math
+- Raycasting engine implementation
+- Perspective projection
+- Texture mapping
+- Vector mathematics (sin, cos, angles)
+- Event-driven rendering
 
+### Networking
+- TCP/IP fundamentals
+- Network configuration & routing (NetPractice)
 
-# Project Structure
-cub3d/
-├── src/
-├── lib/
-├── maps/
-├── textures/
-├── Makefile
+### Tooling & Workflow
+- Makefiles
+- Git & GitHub
+- Debugging with gdb & valgrind
+- Linux & macOS environments
+
+---
+
+## 📂 Projects Overview
+
+| Level | Project | Description |
+|------|--------|------------|
+| Libft | libft | Custom C standard library |
+| Lvl 1 | ft_printf | Reimplementation of printf |
+| Lvl 1 | get_next_line | File reading line by line |
+| Lvl 2 | push_swap | Sorting with constrained operations |
+| Lvl 2 | minitalk | UNIX signals communication |
+| Lvl 3 | philosophers | Multithreading & synchronization |
+| Lvl 4 | minishell | Bash-like shell |
+| Lvl 4 | cub3d | 3D raycasting engine |
+| Bonus | netpractice | Networking fundamentals |
+
+*(Projects list may grow as I progress)*
+
+---
+
+## 🗂️ Repository Structure
+
+```
+42-common-core/
+├── libft/
+├── ft_printf/
+├── get_next_line/
+├── push_swap/
+├── minitalk/
+├── philosophers/
+├── minishell/
+├── cub3d/
+├── netpractice/
 └── README.md
+```
 
+---
 
-# Bonus Part
-Mouse look all direction
-Animated hand & doors
-Mini-map
+## ⚠️ Disclaimer
 
+- This repository is **for educational purposes only**
+- Please do **not copy** this code for evaluations
+- Use it as inspiration and learning reference
 
-# Authors
+---
 
-Oussama El Hassouni with a classmate
-42 Network – 1337 Coding School - Um6p (Mohammed VI Polytechnic University)
+## 🧑‍💻 Author
 
+**Oussama Hassouni**  
+42 Network – 1337 Coding School (Morocco)
 
-📜 License
-This project is for educational purposes as part of the 42 curriculum.
+---
+
+## 🚀 Status
+
+🟢 In progress — Common Core ongoing
+
