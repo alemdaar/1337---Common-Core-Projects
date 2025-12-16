@@ -1,108 +1,124 @@
-# 42 Common Core 📚💻
+# Cub3D 🕹️
 
-This repository contains **all the projects I worked on (and will work on)** during the **42 / 1337 Common Core** curriculum. It reflects my progression in **low-level programming, algorithms, graphics, networking, and system concepts**.
-
----
-
-## 🎯 Purpose of This Repository
-
-- Track my learning journey at **42 Network (1337 – Morocco)**
-- Centralize all Common Core projects in one place
-- Showcase my growth in **C programming and computer science fundamentals**
-- Serve as a reference for revision and improvement
+Cub3D is a **3D raycasting game engine** inspired by *Wolfenstein 3D*, built in **C** using the **MLX42 (Codam)** graphics library.  
+This project is part of the **42 Network curriculum** and focuses on graphics programming, mathematics, and low-level system concepts.
 
 ---
 
-## 🧠 Skills & Concepts Learned
+## ✨ Features
 
-### Programming & Low-level
-- C programming (memory management, pointers, structs)
-- Manual memory allocation (malloc / free)
-- Data structures (arrays, linked lists)
-- Defensive programming & error handling
+- Real-time **raycasting engine**
+- Textured walls with correct perspective
+- Player movement (W / A / S / D)
+- Camera rotation with keyboard and mouse
+- Mouse look (bonus)
+- Floor and ceiling rendering
+- Mini-map (bonus)
+- Doors & hand animation (bonus)
+- Collision detection
 
-### Algorithms & Logic
-- Algorithmic thinking & optimization
-- Sorting algorithms & complexity
-- State machines & parsing logic
+---
 
-### UNIX & Systems
-- UNIX processes (fork, exec, wait)
-- File descriptors & redirections
-- Pipes & signals
-- Multithreading & synchronization (mutexes)
+## 🎮 Controls
 
-### Graphics & Math
-- Raycasting engine implementation
+| Key / Input | Action |
+|------------|--------|
+| W / S | Move forward / backward |
+| A / D | Strafe left / right |
+| ← / → / ↑ / ↓ | Rotate camera |
+| SPACE | Open / close doors |
+| Mouse | Look around |
+| ESC | Exit game |
+
+---
+
+## 🧠 Concepts Learned
+
+- Raycasting mathematics
 - Perspective projection
 - Texture mapping
-- Vector mathematics (sin, cos, angles)
-- Event-driven rendering
-
-### Networking
-- TCP/IP fundamentals
-- Network configuration & routing (NetPractice)
-
-### Tooling & Workflow
-- Makefiles
-- Git & GitHub
-- Debugging with gdb & valgrind
-- Linux & macOS environments
+- Event handling & game loop logic
+- Mouse input handling
+- Collision detection
+- Memory management in C
 
 ---
 
-## 📂 Projects Overview
+## 🛠️ Installation
 
-| Level | Project | Description |
-|------|--------|------------|
-| Libft | libft | Custom C standard library |
-| Lvl 1 | ft_printf | Reimplementation of printf |
-| Lvl 1 | get_next_line | File reading line by line |
-| Lvl 2 | push_swap | Sorting with constrained operations |
-| Lvl 2 | minitalk | UNIX signals communication |
-| Lvl 3 | philosophers | Multithreading & synchronization |
-| Lvl 4 | minishell | Bash-like shell |
-| Lvl 4 | cub3d | 3D raycasting engine |
-| Bonus | netpractice | Networking fundamentals |
+```bash
+git clone https://github.com/alemdaar/1337---Common-Core-Projects.git cc
+cd cc/Circle_04/Cub3d
+make clone_mlx42
+make
+```
 
-*(Projects list may grow as I progress)*
+Or build the bonus version:
+
+```bash
+make bonus
+```
 
 ---
 
-## 🗂️ Repository Structure
+## ▶️ Usage
+
+### Mandatory
+```bash
+./cub3d maps/mandatory/basic.cub
+```
+
+### Bonus
+```bash
+./cub3d maps/bonus/bn.cub
+```
+
+---
+
+## 🗺️ Map Rules
+
+| Symbol | Meaning |
+|-------|---------|
+| `1` | Wall |
+| `0` | Empty space |
+| `N S E W` | Player start position |
+| `D` | Door (bonus) |
+
+- Maps must be **closed and surrounded by walls**
+
+---
+
+## 📁 Project Structure
 
 ```
-42-common-core/
-├── libft/
-├── ft_printf/
-├── get_next_line/
-├── push_swap/
-├── minitalk/
-├── philosophers/
-├── minishell/
-├── cub3d/
-├── netpractice/
+cub3d/
+├── src/
+├── lib/
+├── maps/
+├── textures/
+├── Makefile
 └── README.md
 ```
 
 ---
 
-## ⚠️ Disclaimer
+## 🚀 Bonus Part
 
-- This repository is **for educational purposes only**
-- Please do **not copy** this code for evaluations
-- Use it as inspiration and learning reference
-
----
-
-## 🧑‍💻 Author
-
-**Oussama Hassouni**  
-42 Network – 1337 Coding School (Morocco)
+- Mouse look in all directions
+- Animated hand & doors
+- Mini-map system
 
 ---
 
-## 🚀 Status
+## 👥 Authors
 
-🟢 In progress — Common Core ongoing
+**Oussama El Hassouni** (with a classmate)  
+42 Network – 1337 Coding School  
+UM6P (Mohammed VI Polytechnic University)
+
+---
+
+## 📜 License
+
+This project is developed for **educational purposes only** as part of the 42 curriculum.
 
