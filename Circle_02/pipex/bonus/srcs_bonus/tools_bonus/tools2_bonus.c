@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tools2_bonus.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: macbookair <macbookair@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/20 22:20:38 by oelhasso          #+#    #+#             */
+/*   Updated: 2025/03/25 03:27:26 by macbookair       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../header_bonus.h"
+
+int	check_file2(t_cmd *cmd, t_other *other, int flag)
+{
+	char	*s;
+
+	if (flag == other->count_proc - 1)
+	{
+		s = other->outfile;
+		if (other->is_limiter == TRUE)
+			other->open2 = open(s, O_WRONLY | O_APPEND | O_CREAT, 0644);
+		else
+			other->open2 = open(s, O_WRONLY | O_TRUNC | O_CREAT, 0644);
+		if (other->open2 == -1)
+		{
+			close(other->prev_read);
+			return (free_all(&cmd, other), perror("open: "), exit(1), 1);
+		}
+	}
+	return (SUCCESSFUL);
+}
