@@ -95,21 +95,6 @@ get_next_line/
 ├── get_next_line_bonus.h
 ├── README.md
 ```
-get_next_line/
-├── get_next_line.c
-├── get_next_line_utils.c
-├── get_next_line.h
-├── get_next_line_bonus.c
-├── get_next_line_utils_bonus.c
-├── get_next_line_bonus.h
-├── README.md
-```
-get_next_line/
-├── get_next_line.c
-├── get_next_line_utils.c
-├── get_next_line.h
-├── README.md
-```
 
 ---
 
