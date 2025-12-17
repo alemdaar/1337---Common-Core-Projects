@@ -40,8 +40,8 @@ This repository includes:
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/push_swap.git
-cd push_swap
+git clone https://github.com/alemdaar/1337---Common-Core-Projects.git cc
+cd cc/Circle_01/push_swap
 ```
 
 Compile:
