@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 19:52:35 by oelhasso          #+#    #+#             */
-/*   Updated: 2025/12/26 19:52:36 by oelhasso         ###   ########.fr       */
+/*   Updated: 2025/12/27 17:10:46 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ private:
 public:
     Contact();
 
-    void setContact(
+    void setContact
+    (
         std::string fn,
         std::string ln,
         std::string nn,

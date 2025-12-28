@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 17:19:18 by oelhasso          #+#    #+#             */
-/*   Updated: 2025/12/26 17:48:28 by oelhasso         ###   ########.fr       */
+/*   Updated: 2025/12/27 20:04:05 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
     PhoneBook phonebook;
     std::string cmd;
 
-    while (true)
+    while (1)
     {
         std::cout << "Enter command (ADD, SEARCH, EXIT): ";
     
