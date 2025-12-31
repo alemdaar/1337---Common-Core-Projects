@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 19:52:43 by oelhasso          #+#    #+#             */
-/*   Updated: 2025/12/27 20:11:29 by oelhasso         ###   ########.fr       */
+/*   Updated: 2025/12/30 20:27:12 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,44 +22,40 @@ void PhoneBook::addContact()
 {
     std::string fn, ln, nn, pn, ds;
 
-    while (1)
+    std::cout << "First name: ";
+    std::getline(std::cin, fn);
+    if (fn == "")
     {
-        
-        std::cout << "First name: ";
-        while (std::getline(std::cin, fn))
-        if (fn == "")
-        {
-            std::cout << "First name field is empty !" << std::endl;
-            return ;
-        }
-        std::cout << "Last name: ";
-        std::getline(std::cin, ln);
-        if (ln == "")
-        {
-            std::cout << "Last name field is empty !" << std::endl;
-            return ;
-        }
-        std::cout << "Nickname: ";
-        std::getline(std::cin, nn);
-        if (nn == "")
-        {
-            std::cout << "Nickname field is empty !" << std::endl;
-            return ;
-        }
-        std::cout << "Phone number: ";
-        std::getline(std::cin, pn);
-        if (pn == "")
-        {
-            std::cout << "Phone number field is empty !" << std::endl;
-            return ;
-        }
-        std::cout << "Darkest secret: ";
-        std::getline(std::cin, ds);
-        if (ds == "")
-        {
-            std::cout << "Darkest Secret field is empty !" << std::endl;
-            return ;
-        }
+        std::cout << "First name field is empty !" << std::endl;
+        return ;
+    }
+    std::cout << "Last name: ";
+    std::getline(std::cin, ln);
+    if (ln == "")
+    {
+        std::cout << "Last name field is empty !" << std::endl;
+        return ;
+    }
+    std::cout << "Nickname: ";
+    std::getline(std::cin, nn);
+    if (nn == "")
+    {
+        std::cout << "Nickname field is empty !" << std::endl;
+        return ;
+    }
+    std::cout << "Phone number: ";
+    std::getline(std::cin, pn);
+    if (pn == "")
+    {
+        std::cout << "Phone number field is empty !" << std::endl;
+        return ;
+    }
+    std::cout << "Darkest secret: ";
+    std::getline(std::cin, ds);
+    if (ds == "")
+    {
+        std::cout << "Darkest Secret field is empty !" << std::endl;
+        return ;
     }
 
     contacts[index].setContact(fn, ln, nn, pn, ds);
