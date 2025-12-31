@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 17:19:18 by oelhasso          #+#    #+#             */
-/*   Updated: 2025/12/30 18:13:50 by oelhasso         ###   ########.fr       */
+/*   Updated: 2025/12/31 16:37:15 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ int main()
             phonebook.searchContact();
         else if (cmd == "EXIT")
             break;
-        // else
-        //     std::cout << std::endl;
     }
 
     return 0;

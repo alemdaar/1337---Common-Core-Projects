@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 19:52:43 by oelhasso          #+#    #+#             */
-/*   Updated: 2025/12/30 20:27:12 by oelhasso         ###   ########.fr       */
+/*   Updated: 2025/12/31 16:40:31 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 #include <iostream>
 #include <iomanip>
 
-PhoneBook::PhoneBook() : index(0), count(0) {
-    
-}
+PhoneBook::PhoneBook() : index(0), count(0) {}
 
 void PhoneBook::addContact()
 {
