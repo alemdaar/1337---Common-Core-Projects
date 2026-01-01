@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 17:19:18 by oelhasso          #+#    #+#             */
-/*   Updated: 2025/12/31 16:37:15 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/01 11:08:37 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int main()
 {
     PhoneBook phonebook;
     std::string cmd;
-    int rt;
 
     while (1)
     {
