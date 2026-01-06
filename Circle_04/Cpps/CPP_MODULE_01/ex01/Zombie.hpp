@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 20:20:27 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/06 20:36:37 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/01/06 20:46:18 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/01/06 20:49:20 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-int main() {
-    Zombie stackZom("Stacky");
-    stackZom.announce();
-    randomChump("Chumpy");
-    Zombie* heapZom = newZombie("Heapy");
-    heapZom->announce();
-    delete heapZom;
-    return 0;
+class Zombie {
+    private:
+        std::string ZombieName;
+    public:
+        Zombie(name);
+        ~Zombie();
+        
 }

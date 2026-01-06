@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 20:20:27 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/06 20:36:37 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/01/06 20:46:05 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/01/06 20:46:10 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-int main() {
-    Zombie stackZom("Stacky");
-    stackZom.announce();
-    randomChump("Chumpy");
-    Zombie* heapZom = newZombie("Heapy");
-    heapZom->announce();
-    delete heapZom;
-    return 0;
+Zombie* zombieHorde( int N, std::string name )
+{
+    
 }
