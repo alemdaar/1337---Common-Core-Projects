@@ -6,12 +6,11 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:34:57 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/07 15:35:34 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/07 15:40:20 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-// #include <string>
 
 int main()
 {
