@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FileReplace.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 20:29:26 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/15 20:41:39 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/01/15 20:29:50 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/01/15 20:49:15 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FileReplace.hpp"
-#include <iostream>
 
-int main(int ac, char **av)
-{
-    if (ac != 4) {
-        std::cerr << "Usage: ./replace <filename> <s1> <s2>" << std::endl;
-        return 1;
-    }
+#ifndef FILEREPLACE_HPP
+#define FILEREPLACE_HPP
 
-    std::string s1 = av[2];
-    if (s1.empty()) {
-        std::cerr << "Error: s1 cannot be empty" << std::endl;
-        return 1;
-    }
-    replaceInFile(av[1], s1, av[3]);
+#include <string>
 
-    return 0;
-}
+void replaceInFile(const std::string& filename, const std::string& s1, const std::string& s2);
+
+#endif
