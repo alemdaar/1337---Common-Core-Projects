@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 20:46:05 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/07 12:44:41 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/17 20:48:44 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ Zombie* zombieHorde( int N, std::string name )
         return NULL;
     }
     Zombie* horde = new Zombie[N];
-
     for (int i = 0; i < N; i++) {
         horde[i].setName(name);
     }
-
     return horde;
 }
