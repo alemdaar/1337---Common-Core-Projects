@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:48:20 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/07 20:17:56 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/19 11:06:31 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 class Weapon {
 private:
-    std::string _type;
+    std::string type;
 
 public:
-    Weapon(std::string type);
+    Weapon(std::string given_type);
     ~Weapon();
     const std::string& getType() const;
     void setType(std::string newType);

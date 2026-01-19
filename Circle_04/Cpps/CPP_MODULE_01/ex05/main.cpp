@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:44:32 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/16 19:54:39 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/19 13:15:17 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main() {
     harl.complain("INFO");
     harl.complain("WARNING");
     harl.complain("ERROR");
-    harl.complain("another"); // Test for unknown level
+    harl.complain("something that isnt exist");
 
     return 0;
 }
