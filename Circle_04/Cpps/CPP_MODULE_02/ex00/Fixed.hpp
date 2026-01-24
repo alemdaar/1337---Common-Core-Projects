@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/02 18:22:52 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/19 15:09:04 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/01/23 20:41:08 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/01/24 16:09:09 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-#include "Zombie.hpp"
+#include <iostream>
 
-void randomChump(std::string given) {
-    Zombie localZombie(given);
-    localZombie.announce();
-}
+class Fixed{
+private:
+    int _fixedPointValue;
+    static const int _fractionalBits = 8;
+
+public:
+    Fixed();
+    Fixed(const Fixed &other);
+    Fixed &operator=(const Fixed &other);
+    ~Fixed();
+    int getRawBits(void) const;
+    void setRawBits(int const raw);
+};
+
+#endif

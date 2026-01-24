@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/02 18:22:52 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/19 15:09:04 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/01/23 20:41:10 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/01/24 16:36:17 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-#include "Zombie.hpp"
+int main( void )
+{
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
 
-void randomChump(std::string given) {
-    Zombie localZombie(given);
-    localZombie.announce();
+    c = b;
+
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+
+    return 0;
 }
