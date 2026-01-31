@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:50:30 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/31 22:00:28 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:53:45 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ Fixed::Fixed() : _value(0) {}
 Fixed::Fixed(const int n) : _value(n << _bits) {}
 Fixed::Fixed(const float f) : _value(roundf(f * (1 << _bits))) {}
 Fixed::Fixed(const Fixed &other) {
-    std::cout << "run\n";
     *this = other;
 }
 Fixed::~Fixed() {}
@@ -38,8 +37,6 @@ float Fixed::toFloat(void) const {
 int Fixed::toInt(void) const {
     return this->_value >> _bits;
 }
-
-// --- Comparison ---
 bool Fixed::operator>(const Fixed &other) const {
     return this->_value > other._value;
 }
@@ -55,12 +52,9 @@ bool Fixed::operator<=(const Fixed &other) const {
 bool Fixed::operator==(const Fixed &other) const {
     return this->_value == other._value;
 }
-bool Fixed::operator!=(const Fixed &other) const {
+ bool Fixed::operator!=(const Fixed &other) const {
     return this->_value != other._value;
 }
-
-// --- Arithmetic ---
-// Note: We convert to float to perform the math easily, then convert back
 Fixed Fixed::operator+(const Fixed &other) const {
     return Fixed(this->toFloat() + other.toFloat());
 }
@@ -73,14 +67,10 @@ Fixed Fixed::operator*(const Fixed &other) const {
 Fixed Fixed::operator/(const Fixed &other) const {
     return Fixed(this->toFloat() / other.toFloat());
 }
-
-// --- Increment/Decrement ---
-// Prefix (++a)
 Fixed &Fixed::operator++(void) {
     this->_value++;
     return *this;
 }
-// Postfix (a++)
 Fixed Fixed::operator++(int) {
     Fixed tmp(*this);
     operator++();
@@ -95,19 +85,29 @@ Fixed Fixed::operator--(int) {
     operator--();
     return tmp;
 }
-
-// --- Min/Max ---
 Fixed &Fixed::min(Fixed &a, Fixed &b) {
-    return (a < b) ? a : b;
+    if (a < b)
+        return a;
+    else
+        return b;
 }
 const Fixed &Fixed::min(const Fixed &a, const Fixed &b) {
-    return (a < b) ? a : b;
+    if (a < b)
+        return a;
+    else
+        return b;
 }
 Fixed &Fixed::max(Fixed &a, Fixed &b) {
-    return (a > b) ? a : b;
+    if (a > b)
+        return a;
+    else
+        return b;
 }
 const Fixed &Fixed::max(const Fixed &a, const Fixed &b) {
-    return (a > b) ? a : b;
+    if (a > b)
+        return a;
+    else
+        return b;
 }
 
 std::ostream &operator<<(std::ostream &o, Fixed const &i) {

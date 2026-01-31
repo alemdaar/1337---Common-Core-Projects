@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:50:19 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/31 21:36:19 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:53:56 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ public:
     Fixed operator*(const Fixed &other) const;
     Fixed operator/(const Fixed &other) const;
 
-    Fixed &operator++(void);       // Prefix
-    Fixed operator++(int);        // Postfix
-    Fixed &operator--(void);       // Prefix
-    Fixed operator--(int);        // Postfix
+    Fixed &operator++(void);
+    Fixed operator++(int);
+    Fixed &operator--(void);
+    Fixed operator--(int);
 
     static Fixed &min(Fixed &a, Fixed &b);
     static const Fixed &min(const Fixed &a, const Fixed &b);
