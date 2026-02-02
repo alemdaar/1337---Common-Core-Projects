@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:50:19 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/29 19:50:21 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:53:56 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Fixed {
 private:
     int                 _value;
-    static const int    _bits = 8;
+ static const int    _bits = 8;
 
 public:
     // Canonical Form
@@ -30,13 +30,11 @@ public:
     Fixed &operator=(const Fixed &other);
     ~Fixed();
 
-    // Member functions
     int     getRawBits(void) const;
     void    setRawBits(int const raw);
     float   toFloat(void) const;
     int     toInt(void) const;
 
-    // --- Comparison operators ---
     bool operator>(const Fixed &other) const;
     bool operator<(const Fixed &other) const;
     bool operator>=(const Fixed &other) const;
@@ -44,19 +42,16 @@ public:
     bool operator==(const Fixed &other) const;
     bool operator!=(const Fixed &other) const;
 
-    // --- Arithmetic operators ---
     Fixed operator+(const Fixed &other) const;
     Fixed operator-(const Fixed &other) const;
     Fixed operator*(const Fixed &other) const;
     Fixed operator/(const Fixed &other) const;
 
-    // --- Increment/Decrement operators ---
-    Fixed &operator++(void);       // Prefix
-    Fixed operator++(int);        // Postfix
-    Fixed &operator--(void);       // Prefix
-    Fixed operator--(int);        // Postfix
+    Fixed &operator++(void);
+    Fixed operator++(int);
+    Fixed &operator--(void);
+    Fixed operator--(int);
 
-    // --- Static min/max functions ---
     static Fixed &min(Fixed &a, Fixed &b);
     static const Fixed &min(const Fixed &a, const Fixed &b);
     static Fixed &max(Fixed &a, Fixed &b);
