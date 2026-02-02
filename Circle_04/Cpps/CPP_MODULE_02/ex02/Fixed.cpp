@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:50:30 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/01/29 19:50:32 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/01/30 18:41:09 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Fixed &Fixed::operator=(const Fixed &other) {
 }
 
 // Basic Members
-int Fixed::getRawBits(void) const { return this->_value; }
+int Fixed::getRawBits(void) const {return this->_value; }
 void Fixed::setRawBits(int const raw) { this->_value = raw; }
 float Fixed::toFloat(void) const { return (float)this->_value / (1 << _bits); }
 int Fixed::toInt(void) const { return this->_value >> _bits; }
