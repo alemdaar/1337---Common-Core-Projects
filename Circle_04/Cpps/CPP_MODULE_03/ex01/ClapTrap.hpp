@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 17:47:39 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/06 18:00:34 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/06 18:04:35 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 
 class ClapTrap {
-private:
+protected:
     std::string _name;
     int         _hitPoints;
     int         _energyPoints;
