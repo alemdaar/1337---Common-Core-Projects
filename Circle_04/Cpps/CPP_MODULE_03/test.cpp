@@ -52,6 +52,7 @@ int     head::get_priv_var(void)
 
 int main ()
 {
+    child c;
     head a;
     {
         a.pub_var = 8;
@@ -60,7 +61,6 @@ int main ()
         int x = a.get_priv_var();
         std::cout << "the number we got is : " << x << "\n";
         std::cout << "-------------------\n";
-        child c;
         c.pub_var = 1;
         std::cout << "the public var is : " << c.pub_var << "\n";
         c.set_priv_var(5);
