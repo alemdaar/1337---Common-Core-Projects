@@ -2,7 +2,7 @@
 #include <string>
 
 class head {
-    private:
+    protected:
         int priv_var;
     public:
         head();
@@ -13,9 +13,10 @@ class head {
 };
 
 class child : public head {
-    public:
-        child();
-        ~child();
+    // public:
+    //     child();
+    //     ~child();
+
 };
 
 head::head()
@@ -24,21 +25,21 @@ head::head()
 }
 head::~head()
 {
-    size_t i = 0;
-    while (i < 3999999999)
-    {
-        i++;
-    }
+    // size_t i = 0;
+    // while (i < 3999999999)
+    // {
+    //     i++;
+    // }
     std::cout << "ending head!\n";
 }
-child::child()
-{
-    std::cout << "calling child!\n";
-}
-child::~child()
-{
-    std::cout << "ending child!\n";
-}
+// child::child()
+// {
+//     std::cout << "calling child!\n";
+// }
+// child::~child()
+// {
+//     std::cout << "ending child!\n";
+// }
 void    head::set_priv_var(int value)
 {
     std::cout << "setting private var to : " << value << "\n";
@@ -52,8 +53,8 @@ int     head::get_priv_var(void)
 
 int main ()
 {
-    child c;
     head a;
+    child c;
     {
         a.pub_var = 8;
         std::cout << "the public var is : " << a.pub_var << "\n";
@@ -69,3 +70,8 @@ int main ()
     } // 
     std::cout << "tested \n";
 }
+
+
+
+// public in inherited class
+// 

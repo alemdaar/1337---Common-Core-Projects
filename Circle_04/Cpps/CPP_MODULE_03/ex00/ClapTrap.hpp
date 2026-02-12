@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 17:47:39 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/06 18:00:34 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/12 20:46:05 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
     int         _attackDamage;
 
 public:
+    ClapTrap();
     ClapTrap(std::string name);
     ClapTrap(const ClapTrap &other);
     ClapTrap &operator=(const ClapTrap &other);

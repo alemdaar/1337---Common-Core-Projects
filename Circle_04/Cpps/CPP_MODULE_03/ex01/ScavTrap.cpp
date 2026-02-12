@@ -6,11 +6,13 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 18:03:02 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/06 22:34:16 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/12 20:47:34 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap() {}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     this->_hitPoints = 100;
@@ -36,3 +38,4 @@ void ScavTrap::attack(const std::string& target) {
 void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << _name << " is now in Gatekeeper mode." << std::endl;
 }
+

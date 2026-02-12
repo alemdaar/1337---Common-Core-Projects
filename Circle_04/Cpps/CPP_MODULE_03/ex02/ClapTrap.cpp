@@ -6,11 +6,13 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 17:53:22 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/11 13:57:10 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/12 20:47:03 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap() {}
 
 ClapTrap::ClapTrap(std::string name) 
     : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {

@@ -6,11 +6,13 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:48:06 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/11 16:17:11 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/12 20:48:19 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap() {}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
     this->_hitPoints = 100;
