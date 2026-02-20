@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/19 22:20:49 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/20 22:53:31 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/02/20 20:36:24 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/02/20 20:42:13 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-#include "Animal.hpp"
+#include <string>
+#include <iostream>
 
-class Cat : public Animal {
+class WrongAnimal {
+protected:
+    std::string type;
 public:
-    Cat();
-    ~Cat();
+    WrongAnimal();
+    ~WrongAnimal();
+
     void makeSound() const;
+    std::string getType() const;
 };
 
 #endif

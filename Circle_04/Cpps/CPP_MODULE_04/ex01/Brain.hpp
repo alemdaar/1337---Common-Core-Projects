@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/19 22:20:49 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/20 22:53:31 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/02/20 22:49:48 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/02/20 22:51:27 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
+#include <string>
 
-class Cat : public Animal {
-public:
-    Cat();
-    ~Cat();
-    void makeSound() const;
+class Brain {
+    private:
+        std::string ideas[100];
 };
-
 #endif

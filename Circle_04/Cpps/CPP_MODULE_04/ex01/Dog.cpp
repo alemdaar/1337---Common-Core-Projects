@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/19 22:20:49 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/20 22:53:31 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/02/19 22:35:16 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/02/20 17:12:45 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "Dog.hpp"
 
-#include "Animal.hpp"
+Dog::Dog() {
+    this->type = "Dog";
+    std::cout << "Dog constructor called" << std::endl;
+}
 
-class Cat : public Animal {
-public:
-    Cat();
-    ~Cat();
-    void makeSound() const;
-};
+Dog::~Dog() {
+    std::cout << "Dog destructor called" << std::endl;
+}
 
-#endif
+void Dog::makeSound() const {
+    std::cout << "Woof! Woof!" << std::endl;
+}

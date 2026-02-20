@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/19 22:20:49 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/20 22:53:31 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/02/20 20:41:36 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/02/20 21:27:36 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "WrongCat.hpp"
 
-#include "Animal.hpp"
+WrongCat::WrongCat() {
+    this->type = "WrongCat";
+    std::cout << "WrongCat constructor called" << std::endl;
+}
 
-class Cat : public Animal {
-public:
-    Cat();
-    ~Cat();
-    void makeSound() const;
-};
+WrongCat::~WrongCat() {
+    std::cout << "WrongCat destructor called" << std::endl;
+}
 
-#endif
+void WrongCat::makeSound() const {
+    std::cout << "WrongCat: *Meow?*" << std::endl;
+}
