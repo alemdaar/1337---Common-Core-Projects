@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 22:38:32 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/19 22:39:43 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/20 17:35:43 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,4 @@ Cat::~Cat() {
 void Cat::makeSound() const {
     std::cout << "meao meao!" << std::endl;
 }
+
