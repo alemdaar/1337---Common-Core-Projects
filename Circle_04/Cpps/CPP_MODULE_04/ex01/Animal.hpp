@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 14:59:04 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/20 17:12:18 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/23 17:05:41 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class Animal {
 protected:
     std::string type;
-
 public:
     Animal();
     virtual ~Animal();

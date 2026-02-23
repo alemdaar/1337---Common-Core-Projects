@@ -6,21 +6,38 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 22:35:16 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/20 17:12:45 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/23 17:05:59 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() {
+    std::cout << "Dog constructed." << std::endl;
     this->type = "Dog";
-    std::cout << "Dog constructor called" << std::endl;
+    this->_brain = new Brain();
 }
 
 Dog::~Dog() {
-    std::cout << "Dog destructor called" << std::endl;
+    delete this->_brain;
+    std::cout << "Dog destroyed." << std::endl;
+}
+
+Dog::Dog(const Dog& other) : Animal(other) {
+    this->_brain = NULL;
+    *this = other; 
+}
+
+Dog& Dog::operator=(const Dog& other) {
+    if (this != &other) {
+        this->type = other.type;
+        if (this->_brain)
+            delete this->_brain;
+        this->_brain = new Brain(*other._brain);
+    }
+    return *this;
 }
 
 void Dog::makeSound() const {
-    std::cout << "Woof! Woof!" << std::endl;
+    std::cout << "Woof Woof!" << std::endl;
 }
