@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 14:59:06 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/02/23 17:06:29 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/02/25 20:24:05 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 
 int main()
 {
-    std::cout << "--- SUBJECT BASIC TEST ---" << std::endl;
     const Animal* j = new Dog();
     const Animal* i = new Cat();
     
     delete j;
     delete i;
 
-    std::cout << "\n--- ARRAY TEST (Half Dogs, Half Cats) ---" << std::endl;
     const int count = 4;
     Animal* animals[count];
 
@@ -42,6 +40,7 @@ int main()
     Dog basic;
     {
         Dog tmp = basic;
+        std::cout << "Tmp dog created and about to go out of scope." << std::endl;
     }
 
     std::cout << "Basic is still alive and has its brain!" << std::endl;
