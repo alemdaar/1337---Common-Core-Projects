@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 21:19:54 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/04/03 21:19:55 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/04/04 22:01:43 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,17 @@ void AForm::beSigned(const Bureaucrat& b) {
 
 // Exception messages
 const char* AForm::GradeTooHighException::what() const throw() {
-    return "AForm grade requirements are too high!";
+    return "grade requirements are too high!";
 }
 
 const char* AForm::GradeTooLowException::what() const throw() {
-    return "Bureaucrat grade is too low to sign this Aform!";
+    return "grade requirements are too low!";
 }
+
+const char* AForm::FormNotSignedException::what() const throw() {
+    return "Form is Not Signed";
+}
+
 
 // Getters
 std::string AForm::getName() const { return _name; }

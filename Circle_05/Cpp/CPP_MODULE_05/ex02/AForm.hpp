@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 21:20:13 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/04/03 21:37:45 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/04/04 22:02:01 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 class Bureaucrat;
 
 class AForm {
-private:
-    const std::string _name;
+protected:
+    std::string _name;
     bool              _signed;
-    const int         _gradeToSign;
-    const int         _gradeToExec;
+    int         _gradeToSign;
+    int         _gradeToExec;
 
 public:
     AForm();
@@ -49,6 +49,12 @@ public:
     public:
         virtual const char* what() const throw();
     };
+
+    class FormNotSignedException : public std::exception {
+    public:
+        virtual const char* what() const throw();
+    };
+    
     void execute(Bureaucrat const & executor) const = 0;
 };
 
