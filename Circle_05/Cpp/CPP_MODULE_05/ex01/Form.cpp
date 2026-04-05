@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 17:42:08 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/03/11 17:42:09 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/04/05 22:44:17 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void Form::beSigned(const Bureaucrat& b) {
     this->_signed = true;
 }
 
-// Exception messages
 const char* Form::GradeTooHighException::what() const throw() {
     return "Form grade requirements are too high!";
 }
@@ -35,13 +34,11 @@ const char* Form::GradeTooLowException::what() const throw() {
     return "Bureaucrat grade is too low to sign this form!";
 }
 
-// Getters
 std::string Form::getName() const { return _name; }
 bool Form::getIsSigned() const { return _signed; }
 int Form::getGradeToSign() const { return _gradeToSign; }
 int Form::getGradeToExec() const { return _gradeToExec; }
 
-// Orthodox Canonical Form
 Form::Form() : _name("Default"), _signed(false), _gradeToSign(150), _gradeToExec(150) {}
 Form::~Form() {}
 Form::Form(const Form& other) 
@@ -50,7 +47,7 @@ Form::Form(const Form& other)
 
 Form& Form::operator=(const Form& other) {
     if (this != &other)
-        this->_signed = other._signed; // Only non-const member can be assigned
+        this->_signed = other._signed;
     return *this;
 }
 
