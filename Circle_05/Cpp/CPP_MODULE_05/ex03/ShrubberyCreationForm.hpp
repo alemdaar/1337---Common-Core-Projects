@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/03 21:02:20 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/04/06 11:32:51 by oelhasso         ###   ########.fr       */
+/*   Created: 2026/04/03 20:21:06 by oelhasso          #+#    #+#             */
+/*   Updated: 2026/04/05 22:46:04 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-#define ROBOTOMYREQUESTFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
 #include "AForm.hpp"
+#include <fstream>
 
-class RobotomyRequestForm : public AForm {
+class ShrubberyCreationForm : public AForm {
 private:
     const std::string _target;
 
 public:
-    RobotomyRequestForm();
-    RobotomyRequestForm(const std::string target);
-    RobotomyRequestForm(const RobotomyRequestForm& other);
-    RobotomyRequestForm& operator=(const RobotomyRequestForm& other);
-    virtual ~RobotomyRequestForm();
+    ShrubberyCreationForm();
+    ShrubberyCreationForm(const std::string target);
+    ShrubberyCreationForm(const ShrubberyCreationForm& src);
+    virtual ~ShrubberyCreationForm();
 
-    virtual void execute(Bureaucrat const & executor) const;
+    ShrubberyCreationForm& operator=(const ShrubberyCreationForm& rhs);
+
+    void execute(Bureaucrat const & executor) const;
 };
 
 #endif
