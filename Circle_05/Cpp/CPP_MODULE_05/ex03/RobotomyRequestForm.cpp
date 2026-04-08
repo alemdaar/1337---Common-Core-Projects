@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 12:07:50 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/04/06 20:30:24 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/04/08 21:56:26 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 
     std::cout << "* DRILLING NOISES: BZZZZZZZZZZZZZ! *" << std::endl;\
     static bool x = false;
-    x = !x; // flip
+    x = !x;
     if (x == true) {
         std::cout << _target << " has been robotomized successfully!" << std::endl;
     } else {
