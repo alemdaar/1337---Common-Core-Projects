@@ -13,7 +13,6 @@
 #include "ScalarConverter.hpp"
 #include <iostream>
 #include <climits>
-#include <cfloat>
 #include <cmath>
 #include <iomanip>
 
