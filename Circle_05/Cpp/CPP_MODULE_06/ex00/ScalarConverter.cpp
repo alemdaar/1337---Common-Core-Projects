@@ -6,7 +6,7 @@
 /*   By: oelhasso <oelhasso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 11:16:49 by oelhasso          #+#    #+#             */
-/*   Updated: 2026/04/22 19:36:34 by oelhasso         ###   ########.fr       */
+/*   Updated: 2026/04/25 16:47:15 by oelhasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,6 @@ void ScalarConverter::convert(const std::string &literal) {
             d = std::numeric_limits<double>::infinity();
         else //if (s == "-inf" || s == "-inff")
             d = -std::numeric_limits<double>::infinity();
-        std::cout << "d is : " << d << std::endl;
         displayAll(d);
     }
     else if (isChar(literal)) {
