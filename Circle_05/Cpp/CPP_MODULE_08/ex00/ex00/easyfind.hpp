@@ -10,7 +10,6 @@ int easyfind(T& container, int value) {
 
     if (it == container.end())
         throw std::runtime_error("value not found");
-
     return *it;
 }
 
