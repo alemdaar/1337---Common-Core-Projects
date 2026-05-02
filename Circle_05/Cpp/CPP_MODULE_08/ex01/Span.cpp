@@ -1,6 +1,7 @@
 #include "Span.hpp"
 #include <algorithm>
 #include <climits>
+#include <iostream> // must delete
 
 Span::Span(unsigned int n) : _maxSize(n) {}
 
@@ -45,6 +46,8 @@ int Span::longestSpan() const {
         throw std::logic_error("not enough numbers to compute span");
 
     int max = *std::max_element(_numbers.begin(), _numbers.end());
+    std::cout << "\nmax is : " << max << std::endl; // must delete 
     int min = *std::min_element(_numbers.begin(), _numbers.end());
+    std::cout << "\nmin is : " << min << std::endl; // must delete 
     return max - min;
 }
