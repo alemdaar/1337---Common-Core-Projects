@@ -20,6 +20,7 @@ int main() {
     MutantStack<int>::iterator ite = mstack.end();
     ++it;
     --it;
+    
     while (it != ite) {
         std::cout << *it << std::endl;
         ++it;
@@ -48,6 +49,5 @@ int main() {
         std::cout << *lit << std::endl;
         ++lit;
     }
-
     return 0;
 }

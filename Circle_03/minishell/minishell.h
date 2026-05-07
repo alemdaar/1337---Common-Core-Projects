@@ -33,6 +33,7 @@
 # include <signal.h>
 # include <readline/readline.h>
 # include <readline/history.h>
+extern void	rl_replace_line(const char *text, int clear_undo);
 # include "./parsing/include/token.h"
 # include "./libft/libft.h"
 # include <limits.h>

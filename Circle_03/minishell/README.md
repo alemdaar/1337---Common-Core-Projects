@@ -8,7 +8,7 @@
 
 ## 📝 Description
 
-**minishell** is a 42 Network project that implements a simplified Unix shell. It supports executing commands, built-in commands, redirections, pipes, and basic signal handling.  
+**minishell** is a 42 Network project that implements a simplified Unix shell. It supports executing commands, built-in commands, redirections, pipes, and basic signal handling.
 
 This project was completed with a classmate, focusing on teamwork and collaboration.
 
@@ -16,16 +16,58 @@ This project was completed with a classmate, focusing on teamwork and collaborat
 
 ## ⚡ Features
 
-- Executes external commands using `execve`.  
-- Supports built-in commands: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.  
-- Handles input/output redirections (`>`, `<`, `>>`) and pipes (`|`).  
-- Processes multiple commands chained with pipes.  
-- Handles environment variables and expansions.  
+- Executes external commands using `execve`.
+- Supports built-in commands: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.
+- Handles input/output redirections (`>`, `<`, `>>`) and pipes (`|`).
+- Processes multiple commands chained with pipes.
+- Handles environment variables and expansions.
 - Basic signal handling and memory management.
 
 ---
 
-## 🛠 Installation & Compilation
+## ⚠️ Dependency — GNU Readline
+
+This project requires **GNU readline**. macOS ships with a fake readline (Apple's libedit) that is missing functions like `rl_replace_line` and `rl_catch_signals`, so the system one **will not work** — you must install the real GNU readline via Homebrew.
+
+### On 42 school Macs (no sudo)
+
+42 school machines don't have Homebrew by default. Install the 42-compatible version first:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kube/42homebrew/master/install.sh | zsh
+```
+
+Then add it to your PATH:
+
+```bash
+echo 'export PATH="$HOME/.brew/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Then install readline:
+
+```bash
+brew install readline
+```
+
+### On a personal Mac
+
+If you have Homebrew already:
+
+```bash
+brew install readline
+```
+
+### On Linux
+
+```bash
+sudo apt-get install libreadline-dev   # Debian/Ubuntu
+sudo dnf install readline-devel        # Fedora
+```
+
+---
+
+## 🛠 Compilation
 
 Clone the repository:
 
@@ -40,6 +82,19 @@ Compile:
 make
 ```
 
+Clean object files:
+
+```bash
+make clean
+```
+
+Full reset:
+
+```bash
+make fclean
+make
+```
+
 ---
 
 ## 🚀 Usage
@@ -50,8 +105,8 @@ Run the shell:
 ./minishell
 ```
 
-- The shell will display a prompt where you can enter commands.  
-- Supports both built-in and external commands.  
+- The shell displays a prompt where you can enter commands.
+- Supports both built-in and external commands.
 - Supports redirections, pipes, and environment variable expansions.
 
 Exit the shell with `exit` or `Ctrl+D`.
@@ -63,7 +118,6 @@ Exit the shell with `exit` or `Ctrl+D`.
 ```
 minishell/
 ├── Makefile
-├── en.subject.pdf
 ├── minishell.c
 ├── minishell.h
 ├── exec/
@@ -101,33 +155,32 @@ minishell/
     └── tokens_core/{list_tokens,refactor_tokens,unquotes,utils0_tokens,utils1_tokens,utils3_tokens}.c
 ```
 
-- `exec` contains execution logic, built-ins, pipes, redirections, and GNL.  
-- `libft` contains custom standard library functions.  
-- `parsing` handles command parsing, environment management, tokens, and syntax checking.  
+- `exec` — execution logic, built-ins, pipes, redirections, and GNL.
+- `libft` — custom standard library functions.
+- `parsing` — command parsing, environment management, tokens, and syntax checking.
 
 ---
 
 ## ⚖️ Rules & Constraints
 
-- Implement a functional shell with proper process and memory management.  
-- Must handle signals correctly.  
-- No memory leaks or crashes allowed.  
-- Support redirections and piping.
+- Functional shell with proper process and memory management.
+- Signals handled correctly.
+- No memory leaks or crashes.
+- Redirections and piping fully supported.
 
 ---
 
 ## 🎯 Learning Outcomes
 
-- Process management with `fork`, `execve`, and pipes.  
-- Implementing shell built-ins and environment variable handling.  
-- Command parsing and syntax checking.  
-- Signal handling in a shell environment.  
+- Process management with `fork`, `execve`, and pipes.
+- Implementing shell built-ins and environment variable handling.
+- Command parsing and syntax checking.
+- Signal handling in a shell environment.
 - Collaboration with a teammate to manage a large C project.
 
 ---
 
 ## 👤 Authors
 
-**Oussama Hassouni** & **Classmate**  
+**Oussama Hassouni** & **Classmate**
 42 Network – Morocco
-
