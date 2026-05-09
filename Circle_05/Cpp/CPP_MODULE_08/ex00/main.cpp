@@ -14,8 +14,10 @@ int main() {
 
     std::cout << "--- vector ---" << std::endl;
     try {
-        std::cout << "found: " << easyfind(v, 3) << std::endl;
-        std::cout << "found: " << easyfind(v, 99) << std::endl;
+        int result = easyfind(v, 3);
+        std::cout << "found: " << result << std::endl;
+        result = easyfind(v, 99);
+        std::cout << "found: " << result << std::endl;
     } catch (std::exception& e) {
         std::cout << "exception: " << e.what() << std::endl;
     }
@@ -27,8 +29,10 @@ int main() {
 
     std::cout << "--- list ---" << std::endl;
     try {
-        std::cout << "found: " << easyfind(l, 20) << std::endl;
-        std::cout << "found: " << easyfind(l, 99) << std::endl;
+        int result = easyfind(l, 20);
+        std::cout << "found: " << result << std::endl;
+        result = easyfind(l, 99);
+        std::cout << "found: " << result << std::endl;
     } catch (std::exception& e) {
         std::cout << "exception: " << e.what() << std::endl;
     }
@@ -40,8 +44,10 @@ int main() {
 
     std::cout << "--- deque ---" << std::endl;
     try {
-        std::cout << "found: " << easyfind(d, 200) << std::endl;
-        std::cout << "found: " << easyfind(d, 99) << std::endl;
+        int result = easyfind(d, 200);
+        std::cout << "found: " << result << std::endl;
+        result = easyfind(d, 99);
+        std::cout << "found: " << result << std::endl;
     } catch (std::exception& e) {
         std::cout << "exception: " << e.what() << std::endl;
     }
