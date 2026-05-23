@@ -21,7 +21,7 @@ void BitcoinExchange::loadDatabase(const std::string& filename) {
         throw std::runtime_error("could not open database file.");
 
     std::string line;
-    std::getline(file, line); // skip header "date,exchange_rate"
+    std::getline(file, line);
 
     while (std::getline(file, line)) {
         std::stringstream ss(line);
@@ -87,38 +87,27 @@ void BitcoinExchange::processInput(const std::string& filename) {
         throw std::runtime_error("could not open file.");
 
     std::string line;
-    std::getline(file, line); // skip header "date | value"
+    std::getline(file, line);
 
     while (std::getline(file, line)) {
-        // find the pipe separator
         size_t pipe = line.find('|');
         if (pipe == std::string::npos) {
             std::cerr << "Error: bad input => " << line << std::endl;
             continue;
         }
 
-        // extract date and value
         std::string date  = line.substr(0, pipe - 1);
         std::string value = line.substr(pipe + 2);
 
-        // trim spaces
-        while (!date.empty() && date[date.size() - 1] == ' ')
-            date.erase(date.size() - 1);
-        while (!value.empty() && value[0] == ' ')
-            value.erase(0, 1);
-
-        // validate date
         if (!isValidDate(date)) {
             std::cerr << "Error: bad input => " << line << std::endl;
             continue;
         }
 
-        // validate value
         float amount;
         if (!isValidValue(value, amount))
             continue;
 
-        // get rate and print result
         try {
             float rate = getRate(date);
             std::cout << date << " => " << amount << " = " << amount * rate << std::endl;
