@@ -2,14 +2,14 @@
 
 int main(int argc, char** argv) {
     if (argc < 2) {
-        std::cerr << "Error: no input provided." << std::endl;
+        std::cerr << "Error" << std::endl;
         return 1;
     }
 
     try {
         PmergeMe pm;
         pm.parse(argc, argv);
-        pm.sort();
+        pm.run();
     } catch (std::exception& e) {
         std::cerr << e.what() << std::endl;
         return 1;

@@ -91,7 +91,7 @@ void BitcoinExchange::processInput(const std::string& filename) {
 
     while (std::getline(file, line)) {
         size_t pipe = line.find('|');
-        if (pipe == std::string::npos) {
+        if (pipe == std::string::npos || pipe == 0) {
             std::cerr << "Error: bad input => " << line << std::endl;
             continue;
         }

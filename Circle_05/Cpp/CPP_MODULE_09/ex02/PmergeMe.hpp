@@ -7,7 +7,8 @@
 # include <iostream>
 # include <sstream>
 # include <stdexcept>
-# include <ctime>
+# include <iomanip>
+# include <sys/time.h>
 # include <algorithm>
 
 class PmergeMe {
@@ -18,17 +19,16 @@ public:
     ~PmergeMe();
 
     void parse(int argc, char** argv);
-    void sort();
+    void run();
 
 private:
     std::vector<int> _vec;
     std::deque<int>  _deq;
 
     void mergeInsertVector(std::vector<int>& v);
-    void insertionSortVector(std::vector<int>& v, int left, int right);
-
     void mergeInsertDeque(std::deque<int>& d);
-    void insertionSortDeque(std::deque<int>& d, int left, int right);
+
+    double getTime(struct timeval start, struct timeval end);
 };
 
 #endif

@@ -10,7 +10,8 @@ int main(int argc, char** argv) {
         RPN rpn;
         std::cout << rpn.evaluate(argv[1]) << std::endl;
     } catch (std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        (void)e;
+        std::cerr << "Error" << std::endl;
         return 1;
     }
 

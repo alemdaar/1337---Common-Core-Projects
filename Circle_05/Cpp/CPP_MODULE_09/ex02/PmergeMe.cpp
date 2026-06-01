@@ -18,25 +18,24 @@ PmergeMe::~PmergeMe() {}
 
 void PmergeMe::parse(int argc, char** argv) {
     for (int i = 1; i < argc; i++) {
-        std::stringstream ss(argv[i]);
-        int n;
-        ss >> n;
-        if (ss.fail() || n < 0)
-            throw std::runtime_error("Error");
-        _vec.push_back(n);
-        _deq.push_back(n);
-    }
-}
+        std::string arg = argv[i];
 
-void PmergeMe::insertionSortVector(std::vector<int>& v, int left, int right) {
-    for (int i = left + 1; i <= right; i++) {
-        int key = v[i];
-        int j = i - 1;
-        while (j >= left && v[j] > key) {
-            v[j + 1] = v[j];
-            j--;
+        if (arg.empty())
+            throw std::runtime_error("Error");
+
+        for (size_t j = 0; j < arg.size(); j++) {
+            if (!std::isdigit(arg[j]))
+                throw std::runtime_error("Error");
         }
-        v[j + 1] = key;
+
+        std::stringstream ss(arg);
+        long n;
+        ss >> n;
+        if (ss.fail() || n < 0 || n > 2147483647)
+            throw std::runtime_error("Error");
+
+        _vec.push_back(static_cast<int>(n));
+        _deq.push_back(static_cast<int>(n));
     }
 }
 
@@ -67,25 +66,15 @@ void PmergeMe::mergeInsertVector(std::vector<int>& v) {
     v = larger;
 
     for (size_t i = 0; i < smaller.size(); i++) {
-        std::vector<int>::iterator pos = std::lower_bound(v.begin(), v.end(), smaller[i]);
+        std::vector<int>::iterator pos =
+            std::lower_bound(v.begin(), v.end(), smaller[i]);
         v.insert(pos, smaller[i]);
     }
 
     if (hasOdd) {
-        std::vector<int>::iterator pos = std::lower_bound(v.begin(), v.end(), oddElement);
+        std::vector<int>::iterator pos =
+            std::lower_bound(v.begin(), v.end(), oddElement);
         v.insert(pos, oddElement);
-    }
-}
-
-void PmergeMe::insertionSortDeque(std::deque<int>& d, int left, int right) {
-    for (int i = left + 1; i <= right; i++) {
-        int key = d[i];
-        int j = i - 1;
-        while (j >= left && d[j] > key) {
-            d[j + 1] = d[j];
-            j--;
-        }
-        d[j + 1] = key;
     }
 }
 
@@ -116,40 +105,49 @@ void PmergeMe::mergeInsertDeque(std::deque<int>& d) {
     d = larger;
 
     for (size_t i = 0; i < smaller.size(); i++) {
-        std::deque<int>::iterator pos = std::lower_bound(d.begin(), d.end(), smaller[i]);
+        std::deque<int>::iterator pos =
+            std::lower_bound(d.begin(), d.end(), smaller[i]);
         d.insert(pos, smaller[i]);
     }
 
     if (hasOdd) {
-        std::deque<int>::iterator pos = std::lower_bound(d.begin(), d.end(), oddElement);
+        std::deque<int>::iterator pos =
+            std::lower_bound(d.begin(), d.end(), oddElement);
         d.insert(pos, oddElement);
     }
 }
 
-void PmergeMe::sort() {
+double PmergeMe::getTime(struct timeval start, struct timeval end) {
+    return (end.tv_sec - start.tv_sec) * 1000000.0
+         + (end.tv_usec - start.tv_usec);
+}
+
+void PmergeMe::run() {
     std::cout << "Before: ";
     for (size_t i = 0; i < _vec.size(); i++)
         std::cout << _vec[i] << " ";
     std::cout << std::endl;
 
-    clock_t startVec = clock();
+    struct timeval startVec, endVec;
+    gettimeofday(&startVec, NULL);
     mergeInsertVector(_vec);
-    clock_t endVec = clock();
+    gettimeofday(&endVec, NULL);
 
-    clock_t startDeq = clock();
+    struct timeval startDeq, endDeq;
+    gettimeofday(&startDeq, NULL);
     mergeInsertDeque(_deq);
-    clock_t endDeq = clock();
+    gettimeofday(&endDeq, NULL);
 
     std::cout << "After: ";
     for (size_t i = 0; i < _vec.size(); i++)
         std::cout << _vec[i] << " ";
     std::cout << std::endl;
 
-    double timeVec = (double)(endVec - startVec) / CLOCKS_PER_SEC * 1000000;
-    double timeDeq = (double)(endDeq - startDeq) / CLOCKS_PER_SEC * 1000000;
-
+    std::cout << std::fixed << std::setprecision(5);
     std::cout << "Time to process a range of " << _vec.size()
-              << " elements with std::vector : " << timeVec << " us" << std::endl;
+              << " elements with std::vector : "
+              << getTime(startVec, endVec) << " us" << std::endl;
     std::cout << "Time to process a range of " << _deq.size()
-              << " elements with std::deque  : " << timeDeq << " us" << std::endl;
+              << " elements with std::deque  : "
+              << getTime(startDeq, endDeq) << " us" << std::endl;
 }
