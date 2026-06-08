@@ -131,5 +131,4 @@ By the end of CPP09, the recurring lesson is clear: **C++ gives you many tools, 
 
 **Oussama El Hassouni** — 1337 Coding School (UM6P) / 42 Network
 
-- GitHub: [github.com/alemdaar](https://github.com/alemdaar/1337---Common-Core-Projects)
 - LinkedIn: [linkedin.com/in/oussama-el-hassouni](https://www.linkedin.com/in/oussama-el-hassouni-024228362/)
